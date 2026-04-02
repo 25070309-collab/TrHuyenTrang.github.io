@@ -2,25 +2,25 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Flower Shop</title>
-    <link rel="stylesheet" href="css/FlowerShop.css" />
+    <title>Flower website</title>
+    <link rel="stylesheet" href="flower.css" />
 </head>
+
 <body>
 <div id="wrap">
 
+    <!-- HEADER -->
     <header id="header">
         <div id="logo">
-            <a href="#">
-                <img src="flower logo shop.jpg"  alt="Flower Shop Logo">
-            </a>
+            <img src="flower logo shop.jpg" width="191" height="66" alt="Flower Shop" />
         </div>
 
-        <nav id="menu_top" aria-label="Main navigation">
+        <nav id="menu_top">
             <ul class="level1">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Introduction</a></li>
 
-                <li class="dropdown">
+                <li>
                     <a href="#">Flower Category</a>
                     <ul class="level2">
                         <li><a href="#">Sun Flower</a></li>
@@ -31,138 +31,113 @@
                 </li>
 
                 <li><a href="dangky.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Login</a></li>
                 <li><a href="lienhe.html">Contact</a></li>
-     
             </ul>
         </nav>
-        <div id="cart-icon">
-    🛒 <span id="cart-count">0</span>
-</div>
-
     </header>
 
-    <div id="welcome" role="status">
-        <p>🌷 Welcome to the online sales website — Flower Shop 🌷</p>
+    <!-- WELCOME -->
+    <div id="welcome">
+        <marquee direction="left" behavior="scroll" scrollamount="4">
+            Welcome to the online sales website - Flower Shop
+        </marquee>
     </div>
 
- 
-    <main id="center_content">
+    <!-- CONTENT -->
+    <div id="center_content">
 
-      
-        <section id="left">
-            <h2 class="title">
-                <img src="images (7).jpg" alt=""> New Product
-            </h2>
+        <!-- LEFT -->
+        <div id="left">
+            <div class="title">
+                <img src="images (7).jpg" align="top" /> New Product
+            </div>
 
-      
-            <article class="product">
-                <figure class="img">
-                    <img src="images (3).jpg" alt="Yellow Rose bouquet" width="120" height="120">
-                </figure>
-                <div class="description">
-                    <h3 class="name">Yellow Rose</h3>
-                    <p class="about">
-                        Yellow roses are a special gift for women. A meaningful present for relatives and friends.
-                    </p>
-                    <div class="fake-btn" data-price="25.00">Add to cart</div>
+            <!-- PRODUCT -->
+            <div class="product">
+                <div class="img">
+                    <img src="images (3).jpg" />
                 </div>
-               
-            </article>
-
-    
-            <article class="product">
-                <figure class="img">
-                    <img src="images (4).jpg" alt="Purple Rose bouquet" width="120" height="120">
-                </figure>
                 <div class="description">
-                    <h3 class="name">Purple Rose</h3>
+                    <p class="name">Yellow Rose</p>
                     <p class="about">
-                        A beautiful bouquet expressing affection and deep respect for the one you love.
+                        Yellow roses are a special gift for women.
+                        Yellow roses are truly a more meaningful gift for relatives and friends.
                     </p>
-                    <div class="fake-btn" data-price="25.00">Add to cart</div>
                 </div>
-               
-            </article>
+            </div>
 
-    
-            <article class="product">
-                <figure class="img">
-                    <img src="images (5).jpg" alt="Pink Rose bouquet" width="120" height="120">
-                </figure>
+            <div class="product">
+                <div class="img">
+                    <img src="images (4).jpg" />
+                </div>
                 <div class="description">
-                    <h3 class="name">Pink Rose</h3>
+                    <p class="name">Purple Rose</p>
                     <p class="about">
-                        Symbol of grace and admiration. Perfect for expressing gratitude and appreciation.
+                        A beautiful bouquet of purple roses is an expression of affection
+                        and respect for the person you love.
                     </p>
-                    <div class="fake-btn" data-price="30.00">Add to cart</div>
                 </div>
-            </article>
+            </div>
 
-        </section>
+        </div>
 
-    
-        <aside id="right">
-
-            <section id="promotion">
-                <h2 class="title">
-                    <img src="images (7).jpg" alt=""> Promotion
-                </h2>
-
-                <div class="product_small">
-                    <a href="#">
-                        <h4 class="name">Tulips Flower</h4>
-                        <img src="images (6).jpg" alt="Tulips flower" width="120" height="120">
-                    </a>
+        <!-- RIGHT -->
+        <div id="right">
+            <div id="promotion">
+                <div class="title">
+                    <img src="images (7).jpg" align="top" /> Promotion
                 </div>
 
                 <div class="product_small">
-                    <a href="#">
-                        <h4 class="name">Purple Rose</h4>
-                        <img src="images (4).jpg" alt="Purple rose promotion" width="120" height="120">
-                    </a>
+                    <div class="name">Tulips Flower</div>
+                    <div class="img">
+                        <img src="images (6).jpg" />
+                    </div>
                 </div>
 
                 <div class="product_small">
-                    <a href="#">
-                        <h4 class="name">Yellow Rose</h4>
-                        <img src="images (3).jpg" alt="Yellow rose promotion" width="120" height="120">
-                    </a>
+                    <div class="name">Purple Rose</div>
+                    <div class="img">
+                        <img src="images (4).jpg" />
+                    </div>
                 </div>
-            </section>
+            </div>
 
-    
-            <section id="categories">
-                <h2 class="title">
-                    <img src="images (7).jpg" alt=""> Flower Catalog
-                </h2>
+            <!-- CATEGORY -->
+            <div id="categories">
+                <div class="title">
+                    <img src="images (7).jpg" align="top" /> Flower catalog
+                </div>
 
                 <ul class="menu_right">
-                    <li><a href="#">Purple Rose</a></li>
-                    <li><a href="#">Sun Flower</a></li>
-                    <li><a href="#">Lily Flower</a></li>
-                    <li><a href="#">Blue Rose</a></li>
-                    <li><a href="#">Purple Orchids</a></li>
-                    <li><a href="#">Yellow Rose</a></li>
-                    <li><a href="#">Immortal Flowers</a></li>
-                    <li><a href="#">Tulips Flower</a></li>
+                    <li>Purple rose</li>
+                    <li>Sun Flower</li>
+                    <li>Lily Flower</li>
+                    <li>Blue rose</li>
+                    <li>Purple orchids</li>
+                    <li>Yellow rose</li>
+                    <li>Immortal flowers</li>
+                    <li>Tulips Flower</li>
                 </ul>
-            </section>
-
-        </aside>
-
-    </main>
-
-    <footer id="footer">
-        <div class="left">
-            <strong>Flower Shop Co., Ltd - Vietnam Branch</strong><br>
-            Address: 02 - Pho Ca - ly nhan Dist - Ha Nam City<br>
-            Tel: 0900000001
+            </div>
         </div>
 
-        <div class="right">
-            <img src="image8.jpg" alt="Footer Logo" width="97" height="29">
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer_left">
+            Flower Shop Co., Ltd - Vietnam Branch<br/>
+            Address: Phu Phuc , Ly Nhan , Ha Nam <br/>
+            Tel: 0988322051
+        </div>
+
+        <div class="footer_right">
+            <img src="images (8).jpg" width="97" height="29" />
         </div>
     </footer>
-<script src="js/cart.js" ></script>
+
 </div>
+</body>
+</html>
