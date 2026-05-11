@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giao Diện Tab</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Khu vực tab */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* Tab bình thường */
+        .tab {
+            padding: 12px 20px;
+            margin: 0 5px;
+            border: none;
+            background-color: #cccccc;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Tab đang hoạt động */
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Nội dung tab */
+        .content {
+            display: none;
+            width: 70%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Nội dung đang hiển thị */
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Giao Diện Nội Dung Dạng Tab</h1>
+
+    <!-- Các tab -->
+    <div class="tabs">
+
+        <button class="tab active"
+            onclick="switchTab('features', this)">
+            → Tính năng &reg;
+        </button>
+
+        <button class="tab"
+            onclick="switchTab('pricing', this)">
+            Giá cả &euro;
+        </button>
+
+        <button class="tab"
+            onclick="switchTab('reviews', this)">
+            Đánh giá
+        </button>
+
+        <button class="tab"
+            onclick="switchTab('support', this)">
+            Hỗ trợ
+        </button>
+
+    </div>
+
+    <!-- Nội dung tab -->
+
+    <div id="features"
+        class="content active">
+
+        <h2>Tính năng</h2>
+
+        <p>
+            Hệ thống có giao diện hiện đại,
+            tốc độ nhanh và dễ sử dụng.
+        </p>
+
+    </div>
+
+    <div id="pricing"
+        class="content">
+
+        <h2>Giá cả</h2>
+
+        <p>
+            Gói cơ bản: €20 <br>
+            Gói nâng cao: €50
+        </p>
+
+    </div>
+
+    <div id="reviews"
+        class="content">
+
+        <h2>Đánh giá</h2>
+
+        <p>
+            Người dùng đánh giá sản phẩm rất tốt
+            vì chất lượng và hiệu suất cao.
+        </p>
+
+    </div>
+
+    <div id="support"
+        class="content">
+
+        <h2>Hỗ trợ</h2>
+
+        <p>
+            Đội ngũ hỗ trợ luôn sẵn sàng giúp đỡ 24/7.
+        </p>
+
+    </div>
+
+    <script>
+
+        function switchTab(tabId, element) {
+
+            // Lấy tất cả tab
+            let tabs =
+            document.querySelectorAll(".tab");
+
+            // Xóa trạng thái active của tất cả tab
+            tabs.forEach(function(tab) {
+
+                tab.classList.remove("active");
+
+                // Xóa mũi tên
+                tab.innerHTML =
+                    tab.innerHTML.replace("→ ", "");
+
+            });
+
+            // Lấy tất cả nội dung
+            let contents =
+                document.querySelectorAll(".content");
+
+            // Ẩn toàn bộ nội dung
+            contents.forEach(function(content) {
+
+                content.classList.remove("active");
+
+            });
+
+            // Thêm active cho tab được chọn
+            element.classList.add("active");
+
+            // Thêm mũi tên cho tab đang hoạt động
+            element.innerHTML =
+                "→ " + element.innerHTML;
+
+            // Hiển thị nội dung tương ứng
+            document.getElementById(tabId)
+                .classList.add("active");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

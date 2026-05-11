@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Parts Price List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #dddddd;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Computer Parts Price List</h2>
+
+    <!-- HTML Entities -->
+    <p>
+        &copy; Computer Store <br>
+        Intel Core i9 &trade; <br>
+        High Quality Parts &bull;
+    </p>
+
+    <table id="partsTable">
+
+        <tr>
+            <th>Part Name</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>CPU</td>
+            <td>$300</td>
+        </tr>
+
+        <tr>
+            <td>Graphics Card</td>
+            <td>$500</td>
+        </tr>
+
+        <tr>
+            <td>RAM</td>
+            <td>$120</td>
+        </tr>
+
+        <tr>
+            <td>SSD</td>
+            <td>$150</td>
+        </tr>
+
+    </table>
+
+    <button onclick="changeColor()">
+        Change Color
+    </button>
+
+    <script>
+
+        function changeColor() {
+
+            let table = document.getElementById("partsTable");
+
+            table.style.color = "red";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .menu-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Restaurant Menu</h1>
+
+    <!-- Appetizers -->
+    <div class="menu-section">
+        <h2>Appetizers &reg;</h2>
+
+        <div class="menu-item vegetarian">
+            <span>Vegetable Salad</span>
+            <span>$5</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Chicken Wings</span>
+            <span>$8</span>
+        </div>
+    </div>
+
+    <!-- Main Course -->
+    <div class="menu-section">
+        <h2>Main Course &sect;</h2>
+
+        <div class="menu-item vegetarian">
+            <span>Vegetable Pasta</span>
+            <span>$12</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Beef Steak</span>
+            <span>$18</span>
+        </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-section">
+        <h2>Desserts</h2>
+
+        <div class="menu-item vegetarian">
+            <span>Ice Cream</span>
+            <span>$4</span>
+        </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-section">
+        <h2>Drinks</h2>
+
+        <div class="menu-item vegetarian">
+            <span>Orange Juice</span>
+            <span>$3</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Coffee</span>
+            <span>$2</span>
+        </div>
+    </div>
+
+    <button onclick="filterMenu()">
+        Filter Menu
+    </button>
+
+    <script>
+
+        let showVegetarianOnly = false;
+
+        function filterMenu() {
+
+            let items =
+                document.getElementsByClassName("menu-item");
+
+            showVegetarianOnly =
+                !showVegetarianOnly;
+
+            for (let i = 0; i < items.length; i++) {
+
+                if (showVegetarianOnly) {
+
+                    if (!items[i].classList.contains("vegetarian")) {
+
+                        items[i].style.display = "none";
+
+                    }
+
+                } else {
+
+                    items[i].style.display = "flex";
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

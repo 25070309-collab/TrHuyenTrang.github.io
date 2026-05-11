@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hệ Thống Điều Hướng Cửa Hàng Sách</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Thanh điều hướng */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Danh sách menu */
+        #menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Link menu */
+        #menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+        }
+
+        #menu a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Dấu chấm tròn */
+        .dot {
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Nút toggle */
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Ẩn menu */
+        .hidden {
+            display: none !important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">
+        Cửa Hàng Sách
+    </h1>
+
+    <!-- Thanh điều hướng -->
+    <nav>
+
+        <div id="menu">
+
+            <a href="#">Trang chủ</a>
+
+            <span class="dot">&bull;</span>
+
+            <a href="#">Sách</a>
+
+            <span class="dot">&bull;</span>
+
+            <a href="#">Tác giả&trade;</a>
+
+            <span class="dot">&bull;</span>
+
+            <a href="#">Liên hệ</a>
+
+        </div>
+
+    </nav>
+
+    <!-- Nút Toggle -->
+    <button onclick="toggleMenu()">
+        Menu Chuyển Đổi
+    </button>
+
+    <script>
+
+        function toggleMenu() {
+
+            let menu =
+                document.getElementById("menu");
+
+            menu.classList.toggle("hidden");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
